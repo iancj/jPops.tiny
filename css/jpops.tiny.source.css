@@ -1,0 +1,74 @@
+/*  Zepto Alert Dialogs Plugin Css
+    Version 1.0
+    iancj
+    2013-12-04
+    Visit http://github.com/iancj for more information
+*/
+
+/*reset*/
+*{margin:0;padding:0;}
+ul,dl{list-style:none;}
+a{text-decoration:none;color:#000;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+body{font-family:"microsoft yahei";}
+.popup-container{
+    position: fixed;
+    top:50%;
+    left:50%;
+    margin-left:-145px;
+    width:290px;
+    background-color: rgba(0,0,0,.7);
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    z-index:99999;
+}
+.popup-container .popup-close{
+    position:absolute;
+    top:-10px;
+    right:-10px;
+    display:block;
+    width:27px;
+    height:27px;
+    background: url("data:image/png;base64,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") no-repeat;
+    background-size:27px auto;
+    z-index:999999;
+}
+
+.popup-container,
+.popup-container a{
+    color:#fff;
+}
+
+.popup-container .popup-content,
+.popup-container .popup-panel{
+    text-align:center;
+    padding:10px 15px; 
+}
+
+.popup-container .popup-content{
+    line-height:1.5em;
+}
+
+.popup-container .popup-panel a{
+    display: inline-block;
+    min-width:60px;
+    margin:0 5px;
+    height: 37px;
+    line-height: 37px;
+    padding:0 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    background-color: #38b766;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.popup-overlay{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.5);
+    z-index:9999;
+}

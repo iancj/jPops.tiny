@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Zepto Plugin jPops</title>
+    <link rel="stylesheet" href="css/jpops.tiny.source.css">
+</head>
+
+<body>
+    <button class="j-alert">alert</button>
+    <button class="j-confrim">confirm</button>
+
+    <script src="js/zepto.min.js"></script>
+    <script src="js/zepto.jpops.tiny.source.js"></script>
+    <script>
+    $(function(){
+
+        $(".j-alert").click(function(){
+             $.jPops.alert({
+                content:"alert信息",
+                callback:function(r){
+                    if(r){
+                        $("body").append("<div>alert:确定</div>")
+                    }
+                }
+            });
+        });
+
+        $(".j-confrim").click(function(){
+            $.jPops.confirm({
+                content:"confirm信息",
+                okButton:"ok",
+                cancelButton:"cancel",
+                callback:function(r){
+                    if(r){
+                        $("body").append("<div>confirm:确定</div>")
+                    }
+                    else{
+                        $("body").append("<div>confirm:取消</div>")
+                    }
+                }
+            });
+        });
+
+    });
+    </script>
+</body>
+</html>
