@@ -31,7 +31,7 @@ $.jPops.confirm({
 });
 ```
 
-**<a href="http://iancj.com/jPops/" target="_blank">点击查看在线示例</a>**
+**<a href="http://iancj.com/jPops.tiny/" target="_blank">点击查看在线示例</a>**
 
 ##参数
 
