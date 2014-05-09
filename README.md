@@ -1,7 +1,5 @@
 ##用法
 
-jPops.tiny 依赖于```zepto```，jPops主体js```zepto.jpops.tiny.source.js```,jPops样式```jpops.tiny.source.css```
-
 **alert:**
 ```js
 $.jPops.alert({
@@ -31,10 +29,11 @@ $.jPops.confirm({
 });
 ```
 
-**<a href="http://iancj.com/jPops.tiny/" target="_blank">点击查看在线示例</a>**
 
 ##参数
 
+- **title** 标题
+- **icon** 标题显示的图标
 - **content** 内容
 - **okButton** 确定按钮文字
 - **cancelButton** 取消按钮文字
