@@ -5,20 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Zepto Plugin jPops</title>
-    <link rel="stylesheet" href="css/jpops.tiny.source.css">
+    <link rel="stylesheet" href="css/zepto.jpops.tiny.oa.css">
 </head>
 
 <body>
     <button class="j-alert">alert</button>
     <button class="j-confrim">confirm</button>
 
-    <script src="js/zepto.min.js"></script>
-    <script src="js/zepto.jpops.tiny.source.js"></script>
+    <script src="js/zepto-min.js"></script>
+    <script src="js/zepto.jpops.tiny.oa.js"></script>
     <script>
     $(function(){
 
         $(".j-alert").click(function(){
              $.jPops.alert({
+                icon:"error",
+                title:"出错啦",
                 content:"alert信息",
                 callback:function(r){
                     if(r){
@@ -30,6 +32,8 @@
 
         $(".j-confrim").click(function(){
             $.jPops.confirm({
+                icon:"success",
+                title:"成功啦",
                 content:"confirm信息",
                 okButton:"ok",
                 cancelButton:"cancel",
